@@ -7,7 +7,7 @@
 
   <ng-container matColumnDef="nome">
     <th mat-header-cell *matHeaderCellDef> Nome </th>
-    <td mat-cell *matCellDef="let contact"> {{contact.nome}} </td>
+    <td mat-cell *matCellDef="let contact"> {{contact.name}} </td>
   </ng-container>
 
   <ng-container matColumnDef="email">
@@ -18,14 +18,14 @@
   <ng-container matColumnDef="showButton">
     <th mat-header-cell *matHeaderCellDef></th>
     <td mat-cell *matCellDef="let contact">
-        <button mat-raised-button	color="primary" [routerLink]="['/contact', contact.id]" routerLinkActive="router-link-active" >Detalhes</button>
+        <button mat-raised-button	color="primary" [routerLink]="['/contact', contact._id]" routerLinkActive="router-link-active" >Detalhes</button>
     </td>
   </ng-container>
 
   <ng-container matColumnDef="editButton">
     <th mat-header-cell *matHeaderCellDef></th>
     <td mat-cell *matCellDef="let contact">
-        <button mat-raised-button	color="accent" [routerLink]="['/contact/edit/', contact.id]" routerLinkActive="router-link-active">Editar</button>
+        <button mat-raised-button	color="accent" [routerLink]="['/contact/edit/', contact._id]" routerLinkActive="router-link-active">Editar</button>
     </td>
   </ng-container>
 

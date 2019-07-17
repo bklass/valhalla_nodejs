@@ -6,7 +6,7 @@ var Contact = require('../app/models/contactModel');
 
 dotenv.load();
 
-mongoose.connect(process.env.DB);
+mongoose.connect(process.env.DB,{ useNewUrlParser: true });
 
 router.post('/', function(req, res, next) {
   if (!req.body.email || !req.body.password)

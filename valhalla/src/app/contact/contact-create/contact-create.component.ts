@@ -18,13 +18,15 @@ export class ContactCreateComponent {
       return;
     }
     const contact: Contact = {
-      Name: form.value.Name,
-      Email: form.value.Email,
-      Gender: form.value.Gender,
-      Phone: form.value.Phone,
-      Password: form.value.Password
+      _id: null,
+      name: form.value.Name,
+      email: form.value.Email,
+      gender: form.value.Gender,
+      phone: form.value.Phone,
+      password: form.value.Password
     }
 
     this.contactService.addContact(contact);
+    form.reset();
   }
 }

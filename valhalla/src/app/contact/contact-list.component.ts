@@ -17,7 +17,7 @@ export class ContactListComponent implements OnInit, OnDestroy {
   constructor(public contactService: ContactService) {}
 
   ngOnInit() {
-    this.contacts = this.contactService.getContacts();
+    this.contactService.getContacts();
     this.contactsSub = this.contactService.getContactUpdateListener().subscribe((contacts: Contact[]) => {
         this.contacts = contacts;
     });
@@ -28,8 +28,9 @@ export class ContactListComponent implements OnInit, OnDestroy {
   }
 
   deleteContact(contact: Contact){
-    if (confirm('Você tem certeza que deseja deletar o usuário ' + contact.Email + '?')) {
-      alert(contact.Name + ' removido com sucesso!');
+    if (confirm('Você tem certeza que deseja deletar o usuário ' + contact.email + '?')) {
+      this.contactService.deleteContact(contact);
+      alert(contact.name + ' removido com sucesso!');
     }
   }
 }

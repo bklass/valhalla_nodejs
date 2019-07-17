@@ -13,7 +13,7 @@ exports.index = function (req, res) {
         res.json({
             status: "successo",
             message: "Listagem executada com sucesso!",
-            data: contacts
+            contacts: contacts
         });
     });
 };
