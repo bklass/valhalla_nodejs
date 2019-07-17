@@ -1,0 +1,19 @@
+<label for="name">Nome:</label>
+<input [(ngModel)]="contactName" type="text" placeholder="Seu nome" required> <br />
+
+<label for="email">E-mail:</label>
+<input [(ngModel)]="contactEmail" type="email" placeholder="Seu endereço de email" required> <br />
+
+<label for="gender">Gênero:</label>
+<input [(ngModel)]="contactGender" type="text" placeholder="Qual seu gênero" required> <br />
+
+<label for="phone">Telefone:</label>
+<input [(ngModel)]="contactPhone" type="text" placeholder="Qual seu telefone" required> <br />
+
+<label for="password">Senha:</label>
+<input [(ngModel)]="contactPassword" type="password" placeholder="Digite uma senha" required> <br />
+
+<label for="password-confirmation">Confirme a senha:</label>
+<input [(ngModel)]="contactPasswordConfirmation" type="password" placeholder="Confirme a sua senha" required> <br />
+
+<button (click)="onSaveContact()">Salvar</button>

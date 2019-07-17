@@ -1,0 +1,34 @@
+<mat-card>
+  <form (submit)="onSaveContact(postForm)" #postForm="ngForm">
+    <mat-form-field>
+      <input matInput name="Name" type="text" placeholder="Seu nome" ngModel required #Name="ngModel">
+      <mat-error *ngIf="Name.invalid">Nome inválido</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput name="Email" type="email" placeholder="Seu endereço de email" ngModel required #Email="ngModel">
+      <mat-error *ngIf="Email.invalid">E-mail inválido</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Gênero</mat-label>
+      <mat-select name="Gender" ngModel required #Gender="ngModel">
+        <mat-option value="Feminino">Feminino</mat-option>
+        <mat-option value="Masculino">Masculino</mat-option>
+        <mat-option value="Outro">Outro</mat-option>
+      </mat-select>
+      <mat-error *ngIf="Gender.invalid">Gênero inválido</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput name="Phone" type="text" placeholder="Qual seu telefone" ngModel required #Phone="ngModel">
+      <mat-error *ngIf="Phone.invalid">Telefone inválido</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput name="Password" type="password" placeholder="Digite uma senha" ngModel required #Password="ngModel">
+      <mat-error *ngIf="Password.invalid">Senha inválido</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput name="PasswordConfirmation" type="password" placeholder="Confirme a sua senha" ngModel required #PasswordConfirmation="ngModel">
+      <mat-error *ngIf="PasswordConfirmation.invalid">Senha inválido</mat-error>
+    </mat-form-field>
+    <button mat-raised-button type="submit">Salvar</button>
+  </form>
+</mat-card>

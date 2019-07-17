@@ -1,0 +1,21 @@
+<label for="name">Nome:</label>
+<input [(ngModel)]="productName" type="text" placeholder=" " required> <br />
+
+<label for="band">Banda:</label>
+<input [(ngModel)]="productBand" type="text" placeholder=" " required> <br />
+
+<label for="image">Link da Imagem:</label>
+<input [(ngModel)]="productLink"  placeholder=" " required> <br />
+
+<label for="size">Tamanho:</label>
+<input [(ngModel)]="productSize" type="text" placeholder=" " required> <br />
+
+<label for="quantity">Quantidade:</label>
+<input [(ngModel)]="productQuantity"  placeholder="" required> <br />
+
+<label for="price">Valor:</label>
+<input [(ngModel)]="productPrice"  placeholder="" required> <br />
+
+
+
+<button (click)="onSaveProduct()">Salvar</button>
