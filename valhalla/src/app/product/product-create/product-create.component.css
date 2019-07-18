@@ -1,0 +1,17 @@
+mat-card{
+    width: 80%;
+    margin: auto;
+}
+  
+.formProducts {
+  display: flex;
+  flex-direction: column;
+}
+
+.formProducts > * {
+  width: 100%;
+}
+
+.formProducts50 > * {
+  width: 49%;
+}

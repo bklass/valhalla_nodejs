@@ -30,7 +30,7 @@ app.use(function(req, res, next) {
     next();
 })
 
-app.use('/products', authRouter.contactValidation);
+// app.use('/products', authRouter.contactValidation);
 
 app.use('/', indexRouter);
 app.use('/products', productsRouter);

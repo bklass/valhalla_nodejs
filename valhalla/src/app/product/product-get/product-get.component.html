@@ -1,12 +1,11 @@
-<table>
-  <thead>
-  <tr>
-      <td>Product Nome</td>
-      <td>Product Banda</td>
-      <td>Link da img</td>
-      <td>Estoque</td>
-      <td>Preço</td>
-      <td colspan="2">Actions</td>
-  </tr>
-  </thead>
-</table>
+<h2>Produto</h2>
+
+
+<mat-card>
+  <img src='{{product?.image}}' class="image" />
+  <mat-list>
+    <mat-list-item> <p><strong>Nome: </strong> {{product?.name}} </p></mat-list-item>
+    <mat-list-item> <p><strong>Banda: </strong> {{product?.band}} </p></mat-list-item>
+    <mat-list-item> <p><strong>Preço: </strong> <span matPrefix>R$&nbsp;</span>{{product?.price}}<span matSuffix>,00</span></p></mat-list-item>
+  </mat-list>  
+</mat-card>

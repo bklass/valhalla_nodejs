@@ -1,13 +1,10 @@
-<table>
-  <thead>
-  <tr>
-      <td>Nome</td>
-      <td>Email</td>
-      <td>Link da img</td>
-      <td>Genero</td>
-      <td>Telefone</td>
+<h2>Contato</h2>
 
-      <td colspan="2">Opções</td>
-  </tr>
-  </thead>
-</table>
+<mat-card>
+  <mat-list>
+    <mat-list-item> <p><strong>Nome: </strong> {{contact?.name}} </p></mat-list-item>
+    <mat-list-item> <p><strong>E-mail: </strong> {{contact?.email}} </p></mat-list-item>
+    <mat-list-item> <p><strong>Gênero: </strong> {{contact?.gender}} </p></mat-list-item>
+    <mat-list-item> <p><strong>Telefone: </strong> {{contact?.phone}} </p></mat-list-item>
+  </mat-list>  
+</mat-card>

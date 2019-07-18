@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -10,40 +10,54 @@ import { MatInputModule,
   MatCardModule,
   MatButtonModule,
   MatSelectModule,
-  MatTableModule
+  MatTableModule,
+  MatListModule,
+  MatTabsModule, 
+  MatSidenavModule,
+  MatToolbarModule,
+  MatIconModule
 } from '@angular/material';
 
+import { HeaderComponent } from './navigation/header.component';
+import { SidenavComponent } from './navigation/sidenav.component';
+
 import { ContactCreateComponent } from './contact/contact-create/contact-create.component';
-import { ContactEditComponent } from './contact/contact-edit/contact-edit.component';
 import { ContactGetComponent } from './contact/contact-get/contact-get.component';
 import { ContactListComponent } from './contact/contact-list.component';
 
 import { ProductCreateComponent } from './product/product-create/product-create.component';
-import { ProductEditComponent } from './product/product-edit/product-edit.component';
+import { ProductListComponent } from './product/product-list.component';
 import { ProductGetComponent } from './product/product-get/product-get.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactCreateComponent,
-    ContactEditComponent,
     ContactGetComponent,
     ContactListComponent,
     ProductCreateComponent,
-    ProductEditComponent,
-    ProductGetComponent
+    ProductListComponent,
+    ProductGetComponent,
+    HeaderComponent,
+    SidenavComponent
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     MatInputModule,
     MatCardModule,
     MatButtonModule,
     MatSelectModule,
-    MatTableModule
+    MatTableModule,
+    MatListModule,
+    MatTabsModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
