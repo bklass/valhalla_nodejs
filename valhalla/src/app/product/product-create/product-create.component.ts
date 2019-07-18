@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { NgForm, FormArray, FormBuilder, FormGroup, Validators  } from '@angular/forms';
+import { NgForm, FormArray, FormBuilder, FormGroup  } from '@angular/forms';
 import { ActivatedRoute, ParamMap } from '@angular/router';
  
 import { Product } from '../product.model';
+// import { Stock } from '../stock.model';
 import { ProductService } from '../product.service';
 
 @Component({
@@ -36,6 +37,7 @@ export class ProductCreateComponent {
     if (form.invalid){
       return;
     }
+    // const stockList: Stock[] = form.value.Stock;
     const product: Product = {
       _id: null,
       name: form.value.Name,
